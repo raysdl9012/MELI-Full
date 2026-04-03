@@ -25,11 +25,7 @@ Construida como solución al Mobile AI Challenge, la app prioriza **decisiones d
 ## Estructura del repositorio
 
 ```
-MeLiExplorer/
-├── specs/
-│   ├── functional_spec.md     ← Qué construir: pantallas, flujos, estados, criterios
-│   ├── technical_spec.md      ← Cómo construirlo: arquitectura, capas, persistencia, testing
-│   └── validation_plan.md     ← Qué se valida, cómo y qué riesgo residual queda abierto
+
 ├── src/
 │   ├── MeLiExplorer/          ← Mini-App (Proyecto XcodeGen)
 │   │   ├── App/
@@ -40,7 +36,10 @@ MeLiExplorer/
 │   │   └── Tests/
 │   ├── Designe Stitch/        ← Recursos visuales y mockups AI
 │   └── PhotosEmulador/        ← Capturas del simulador real
-└── run.md                     ← Pasos para correr la app y los tests
+└── run.md                     ← Pasos para correr la app y los tests   
+└── functional_spec.md         ← Qué construir: pantallas, flujos, estados, criterios
+└── technical_spec.md          ← Cómo construirlo: arquitectura, capas, persistencia, testing
+└── validation_plan.md         ← Qué se valida, cómo y qué riesgo residual queda abierto
 ```
 
 ---

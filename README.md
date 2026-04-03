@@ -9,7 +9,7 @@ Candidato: Reinner Steven Daza Leiva
 
 | Search | Detail | Saved |
 |--------|--------|-------|
-| ![Search](specs/screenshots/search.png) | ![Detail](specs/screenshots/detail.png) | ![Saved](specs/screenshots/saved.png) |
+| ![Search](specs/screenshots/specs/screenshots/imagen1.png) | ![Detail](specs/screenshots/imagen2.png) | ![Saved](specs/screenshots/imagen3.png) |
 
 > Las capturas se encuentran en `specs/screenshots/`. Si el directorio no existe, correr la app en simulador y tomar capturas con `Cmd + S`.
 

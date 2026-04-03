@@ -11,7 +11,6 @@ Candidato: Reinner Steven Daza Leiva
 |--------|--------|-------|
 | ![Search](specs/screenshots/imagen1.png) | ![Detail](specs/screenshots/imagen2.png) | ![Saved](specs/screenshots/imagen3.png) |
 
-> Las capturas se encuentran en `specs/screenshots/`. Si el directorio no existe, correr la app en simulador y tomar capturas con `Cmd + S`.
 
 ---
 
@@ -31,12 +30,16 @@ MeLiExplorer/
 │   ├── functional_spec.md     ← Qué construir: pantallas, flujos, estados, criterios
 │   ├── technical_spec.md      ← Cómo construirlo: arquitectura, capas, persistencia, testing
 │   └── validation_plan.md     ← Qué se valida, cómo y qué riesgo residual queda abierto
-├── source/
-│   ├── App/
-│   ├── Core/
-│   ├── Features/
-│   ├── Shared/
-│   └── Resources/
+├── src/
+│   ├── MeLiExplorer/          ← Mini-App (Proyecto XcodeGen)
+│   │   ├── App/
+│   │   ├── Core/
+│   │   ├── Features/
+│   │   ├── Shared/
+│   │   ├── Resources/
+│   │   └── Tests/
+│   ├── Designe Stitch/        ← Recursos visuales y mockups AI
+│   └── PhotosEmulador/        ← Capturas del simulador real
 └── run.md                     ← Pasos para correr la app y los tests
 ```
 

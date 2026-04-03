@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1a1b1f",
+              "on-primary-fixed-variant": "#004493",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fcf8fb",
+              "outline": "#717786",
+              "primary-fixed-dim": "#adc6ff",
+              "on-surface-variant": "#414755",
+              "inverse-primary": "#adc6ff",
+              "error-container": "#ffdad6",
+              "background": "#fcf8fb",
+              "surface-dim": "#dcd9dc",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "surface-container": "#f0edef",
+              "secondary": "#5d5e63",
+              "surface": "#fcf8fb",
+              "surface-container-high": "#eae7ea",
+              "tertiary-fixed": "#ffdbcc",
+              "on-tertiary-fixed": "#351000",
+              "on-surface": "#1b1b1d",
+              "outline-variant": "#c1c6d7",
+              "inverse-surface": "#303032",
+              "surface-container-highest": "#e4e2e4",
+              "on-primary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "primary-container": "#0070eb",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#c64f00",
+              "on-error-container": "#93000a",
+              "on-background": "#1b1b1d",
+              "on-secondary-container": "#626267",
+              "secondary-container": "#e0dfe4",
+              "secondary-fixed-dim": "#c6c6cb",
+              "tertiary-fixed-dim": "#ffb595",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "on-primary-fixed": "#001a41",
+              "surface-variant": "#e4e2e4",
+              "tertiary": "#9e3d00",
+              "secondary-fixed": "#e3e2e7",
+              "on-secondary-fixed-variant": "#46464b",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#005bc1",
+              "inverse-on-surface": "#f3f0f2",
+              "primary": "#0058bc",
+              "error": "#ba1a1a",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-low": "#f6f3f5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf8fb]/80 dark:bg-[#1b1b1d]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<h1 class="font-['Inter'] font-semibold text-lg tracking-tight text-[#1b1b1d] dark:text-[#fcf8fb]">Explorar</h1>
+<div class="flex items-center gap-3">
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined text-[#0058bc] dark:text-[#0070eb]">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Search Bar Section -->
+<div class="px-6 pb-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3 pl-12 pr-4 text-sm font-body focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-on-surface-variant/60" placeholder="Buscar en MeLi Explorer" type="text"/>
+</div>
+</div>
+<div class="bg-gradient-to-b from-[#f6f3f5] to-transparent h-px"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[140px] pb-24 px-4 max-w-3xl mx-auto">
+<!-- Results Summary (Editorial Authority) -->
+<div class="mb-6 px-2">
+<p class="text-[0.75rem] font-['Inter'] font-bold uppercase tracking-[0.05em] text-on-surface-variant mb-1">Resultados</p>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Selección Curada</h2>
+</div>
+<!-- Product List (The "No Divider" Mandate) -->
+<div class="flex flex-col space-y-4">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98] duration-200">
+<div class="w-24 h-24 flex-shrink-0 bg-surface-container-low rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Modern sleek wireless headphones in matte black finish on a minimalist neutral background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC79XRcfYrcQqhEmoaJQti9-Epi1sRmrs5npB80-4eC_sKZVEdZRZF0p5LcO8VtOHB8F2Nf8uH5UTBVEix04K5fWv8bNLtTnS45FDztMOpK1AicZ7pFjcvSIFODYe2z5PTFLidO52_KNjuEXehRuA6CrNI5O3qY0lf3BWaza7RXCqYUySJ0Lu9MghbsZxE4BN350wmbPPBbMxTNwgjkSPSkqzlIRS1n6PJeqhzd5iA2SbgfsWms2Sgm4gPTA6Pyrk5uQD-sJnQeiFY"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-24">
+<div>
+<h3 class="text-[0.9375rem] font-medium leading-snug line-clamp-2 text-on-surface">Auriculares Wireless Noise Cancelling Premium Black Edition</h3>
+<p class="text-[0.75rem] text-on-surface-variant mt-1">Por TechNova Store</p>
+</div>
+<p class="text-[1.125rem] font-extrabold tracking-tight text-on-surface">$ 125.990</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98] duration-200">
+<div class="w-24 h-24 flex-shrink-0 bg-surface-container-low rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist automatic coffee maker with glass carafe and stainless steel details, cinematic lighting on a kitchen counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTnQDNBrzrvoQ6E4s5i5u8Du29-mHlygAzO9haSt25FW4sJkSDpg3Z-ldFfESAxfGHcFWsAtfuJnC3ynYp6z3vdSfFdfFSK5DOirGOFsdLS77CW8L174dChzXbiXYnpOzcmZXCa85AmYb1TRuEp944Ig9oZ3F2vWIW4LXV9CZo6qx5jvcwbbKifmi6x2STOmWTzfYMGbnV6PZshwZO_q30ys4qqzMBmXCnM3NfgvpMLaQMDvUHv-Itd9F_ipt-e7BFH3DAyvLBkJ0"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-24">
+<div>
+<h3 class="text-[0.9375rem] font-medium leading-snug line-clamp-2 text-on-surface">Cafetera Automática Express con Molinillo Integrado</h3>
+<p class="text-[0.75rem] text-on-surface-variant mt-1">Hogar y Estilo</p>
+</div>
+<p class="text-[1.125rem] font-extrabold tracking-tight text-on-surface">$ 489.500</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98] duration-200">
+<div class="w-24 h-24 flex-shrink-0 bg-surface-container-low rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Pair of designer athletic running shoes in vibrant teal and neon accents, studio lighting with dynamic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoaV_w1X12VEy7AiupahrHgbq7ojjfnR2nCqrhSJ22X3K2tAsmHVt7yO7X9nSxw9A-osZ_a8rvGmaBt1TU6rwGTCsG1GmtcIrKmIB0DKND6lzN_Fu0fRsmAV3yzLi1EZ7h3jnWuaVt42c-BpcBtTAjyJPQykQfgIqVoB-pEnGxGX7iuAJkNAKJ79kI6TSvHt4zz-D-nal2FaXo-IZIJ7WlCoeGnWMz_SEkzRZWat3MLxARnm8XOsuarb8vJ9lTq7ITe-RvcvUwBMg"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-24">
+<div>
+<h3 class="text-[0.9375rem] font-medium leading-snug line-clamp-2 text-on-surface">Zapatillas Running Pro-Ultralight Versión 2024</h3>
+<p class="text-[0.75rem] text-on-surface-variant mt-1">Sport Elite</p>
+</div>
+<p class="text-[1.125rem] font-extrabold tracking-tight text-on-surface">$ 195.000</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98] duration-200">
+<div class="w-24 h-24 flex-shrink-0 bg-surface-container-low rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Elegant leather laptop sleeve in chestnut brown lying on a clean white desk next to a notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuLJaZw4PfGzS7fQvAmoHdfVh2_91nR8S1k9-18ZtxVxJnhzpnRgXrRyoCKmwmBXv7R2SEOzFkUM_8-vYZxMyvdIoip-9mQJDNdK98LlWR7jY911Uag1x5sWJuA6xjp51_6eSNh3JGckiQJAIB2pG283gNO4j-L2d45nPXCIsORpIfg1kzPWReprYB82NAOwRJIvSCwTmDv3ImfWvwFkKsD8gr1piSMYpLj130745fqaOQLo1hcVSFDJjbIS2yp-sIfW3zKBGm10"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-24">
+<div>
+<h3 class="text-[0.9375rem] font-medium leading-snug line-clamp-2 text-on-surface">Funda de Cuero Genuino para Macbook Air/Pro 13"</h3>
+<p class="text-[0.75rem] text-on-surface-variant mt-1">Artisan Leather</p>
+</div>
+<p class="text-[1.125rem] font-extrabold tracking-tight text-on-surface">$ 67.200</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98] duration-200">
+<div class="w-24 h-24 flex-shrink-0 bg-surface-container-low rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Modern smart watch with colorful silicon band displaying health stats, bright soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBwUDS7lUNtx2qPtwvjqzI6-kEXs3Exf_snfwW83YckQSpLauT3C0s0cCsc9NJxYf-B3BtI1bUB0G1wri5zYirUoXw1Nw9FMFcGMl_Yz3jWF2TByP-_sSELsE5mWvISKyMojRSoHVBvNuaDWwqTsEpERKjadMm3637w3NmfBvzDDKwoHMYiYV-0LWDQKdtZSd8Bmgu7U2tZ7SUB_7Ebq51LPBnWMoqm_lHZFHpWLmdjfH5t-WD3xa3uzMF-DfB51mPe8o8CENRn0Y"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-24">
+<div>
+<h3 class="text-[0.9375rem] font-medium leading-snug line-clamp-2 text-on-surface">Smartwatch Series X con Sensor de Oxígeno y GPS</h3>
+<p class="text-[0.75rem] text-on-surface-variant mt-1">Gadget Central</p>
+</div>
+<p class="text-[1.125rem] font-extrabold tracking-tight text-on-surface">$ 312.990</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-2 pb-6 px-4 bg-[#fcf8fb]/80 dark:bg-[#1b1b1d]/80 backdrop-blur-xl z-50 rounded-t-[1.5rem] border-t border-[#f6f3f5] dark:border-[#414755]/15 shadow-[0_-4px_20px_rgba(27,27,29,0.04)]">
+<!-- Explorar (Active) -->
+<a class="flex flex-col items-center justify-center text-[#0058bc] dark:text-[#0070eb] font-semibold tap-highlight-none active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Explorar</span>
+</a>
+<!-- Guardados -->
+<a class="flex flex-col items-center justify-center text-[#414755] dark:text-[#f6f3f5]/60 hover:text-[#0058bc] transition-colors tap-highlight-none active:scale-95" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Guardados</span>
+</a>
+<!-- Perfil -->
+</nav>
+</body></html>

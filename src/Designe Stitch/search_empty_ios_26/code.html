@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MeLi Explorer - Explorar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1a1b1f",
+              "on-primary-fixed-variant": "#004493",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fcf8fb",
+              "outline": "#717786",
+              "primary-fixed-dim": "#adc6ff",
+              "on-surface-variant": "#414755",
+              "inverse-primary": "#adc6ff",
+              "error-container": "#ffdad6",
+              "background": "#fcf8fb",
+              "surface-dim": "#dcd9dc",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "surface-container": "#f0edef",
+              "secondary": "#5d5e63",
+              "surface": "#fcf8fb",
+              "surface-container-high": "#eae7ea",
+              "tertiary-fixed": "#ffdbcc",
+              "on-tertiary-fixed": "#351000",
+              "on-surface": "#1b1b1d",
+              "outline-variant": "#c1c6d7",
+              "inverse-surface": "#303032",
+              "surface-container-highest": "#e4e2e4",
+              "on-primary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "primary-container": "#0070eb",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#c64f00",
+              "on-error-container": "#93000a",
+              "on-background": "#1b1b1d",
+              "on-secondary-container": "#626267",
+              "secondary-container": "#e0dfe4",
+              "secondary-fixed-dim": "#c6c6cb",
+              "tertiary-fixed-dim": "#ffb595",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "on-primary-fixed": "#001a41",
+              "surface-variant": "#e4e2e4",
+              "tertiary": "#9e3d00",
+              "secondary-fixed": "#e3e2e7",
+              "on-secondary-fixed-variant": "#46464b",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#005bc1",
+              "inverse-on-surface": "#f3f0f2",
+              "primary": "#0058bc",
+              "error": "#ba1a1a",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-low": "#f6f3f5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: 100dvh;
+    }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Updated Top Navigation (iOS 26 Style) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="hover:opacity-70 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="menu">menu</span>
+</div>
+<h1 class="font-['Inter'] tracking-tight font-semibold text-lg text-blue-700 dark:text-blue-400">Explorar</h1>
+<div class="hover:opacity-70 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="min-h-screen flex flex-col items-center px-8 pt-24 pb-32">
+<!-- Search Field (Floating Style) -->
+<div class="w-full max-w-md mb-12">
+<div class="flex items-center bg-surface-container-low/60 backdrop-blur-md rounded-2xl px-4 py-3 space-x-3 border border-white/20 shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-xl" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder-on-surface-variant font-body text-md" readonly="" type="text" value="Vintage Watch"/>
+<span class="material-symbols-outlined text-on-surface-variant/40 text-xl cursor-pointer hover:text-on-surface transition-colors" data-icon="cancel">cancel</span>
+</div>
+</div>
+<!-- Empty State Container -->
+<div class="flex flex-col items-center text-center max-w-xs flex-1 justify-center">
+<div class="mb-8 relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full scale-[2.5] blur-3xl"></div>
+<span class="material-symbols-outlined text-8xl text-outline-variant/40 relative z-10" data-icon="search" style="font-variation-settings: 'wght' 200;">search</span>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-3 tracking-tight">Sin resultados</h2>
+<p class="text-on-surface-variant text-md mb-10">No pudimos encontrar nada para <span class="font-semibold text-on-surface">"Vintage Watch"</span>. Intenta con otros términos.</p>
+<!-- Suggested Actions -->
+<div class="w-full space-y-3">
+<button class="w-full bg-primary text-on-primary font-semibold py-4 rounded-2xl hover:opacity-90 active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                    Borrar búsqueda
+                </button>
+<button class="w-full bg-surface-container-highest text-on-surface font-semibold py-4 rounded-2xl hover:bg-surface-container-high active:scale-[0.98] transition-all">
+                    Ver tendencias
+                </button>
+</div>
+</div>
+<!-- Suggestions Section -->
+<div class="w-full max-w-md mt-20">
+<h3 class="text-[11px] font-bold uppercase tracking-[0.15em] text-on-surface-variant/60 mb-6 text-center">Quizás te interese</h3>
+<div class="grid grid-cols-2 gap-5">
+<!-- Suggestion Card 1 -->
+<div class="bg-white/40 dark:bg-white/5 backdrop-blur-md p-4 rounded-[2rem] border border-white/20 shadow-sm active:scale-95 transition-all cursor-pointer group">
+<div class="aspect-square rounded-2xl bg-surface-container overflow-hidden mb-4 shadow-inner">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern minimalist white digital watch on a clean studio background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Ls3TstWchjqzkDyLfcgoSco939hkOJz6kELudy6w44L4bCLBi-VyudYQSKK-G3CDg_SnRG4fFny1XoNT-EL5jqeFl_ETec6AO6tl03AX8PI41siAKm36ZizQp70g_jyv5BHkPgTXG8YG082Mk3KTluf2q95w5vhPvoGwyjP8YTWGLiSdGyDlIHH1HMM9Vau6v1ZeXf7tV8r1GLwZqLwcjGOlgl0Z3aIxLTWJvZ2eNZBhvZeyv6-2gL-6GyxyuhUPwqaFQXPH_T4"/>
+</div>
+<p class="text-sm font-bold text-on-surface truncate px-1">Relojes Digitales</p>
+<p class="text-[11px] text-blue-600 font-bold uppercase tracking-wider px-1 mt-1">Explorar</p>
+</div>
+<!-- Suggestion Card 2 -->
+<div class="bg-white/40 dark:bg-white/5 backdrop-blur-md p-4 rounded-[2rem] border border-white/20 shadow-sm active:scale-95 transition-all cursor-pointer group">
+<div class="aspect-square rounded-2xl bg-surface-container overflow-hidden mb-4 shadow-inner">
+<img alt="Product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Luxury mechanical watch movement close-up showing gears and intricate gold components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe8E5PW5UpHmBU9jyHvr4LgMRmCZbVNxNhs57kTcgAdT1r3Y-9gcLzThyWEpVSjeKwRgEuy9ZvVoLDpxRj_7Bj9BRn-thsQF3LMnHtoNjkeyBuwx1VKNKOTRBmoRF0Q0Q289vb9bYo1kGEQB5OZlf2bUishjHL4aIefzzD-hGzZeN83UoO1V9_tsyFXzaz3rpibJLY_HvsY1hpG0lwvQHIUFpWe8XBCwJVZDjLlEE6Qmkwfv1KWMdfDg_RYwQIdVfl3krpcACJvnU"/>
+</div>
+<p class="text-sm font-bold text-on-surface truncate px-1">Colección Premium</p>
+<p class="text-[11px] text-blue-600 font-bold uppercase tracking-wider px-1 mt-1">Ver más</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Updated Bottom Navigation (iOS 26 Floating Dock) -->
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-2 p-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] min-w-[240px]">
+<!-- Active Tab: Explorar -->
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/30 rounded-full px-6 py-2 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-[0.05em] uppercase">Explorar</span>
+</a>
+<!-- Tab: Guardados -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:bg-white/40 dark:hover:bg-slate-800/40 rounded-full transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="bookmark">bookmark</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-[0.05em] uppercase">Guardados</span>
+</a>
+</nav>
+</body></html>

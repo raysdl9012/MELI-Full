@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MeLi Explorer - Explorar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1a1b1f",
+              "on-primary-fixed-variant": "#004493",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fcf8fb",
+              "outline": "#717786",
+              "primary-fixed-dim": "#adc6ff",
+              "on-surface-variant": "#414755",
+              "inverse-primary": "#adc6ff",
+              "error-container": "#ffdad6",
+              "background": "#fcf8fb",
+              "surface-dim": "#dcd9dc",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "surface-container": "#f0edef",
+              "secondary": "#5d5e63",
+              "surface": "#fcf8fb",
+              "surface-container-high": "#eae7ea",
+              "tertiary-fixed": "#ffdbcc",
+              "on-tertiary-fixed": "#351000",
+              "on-surface": "#1b1b1d",
+              "outline-variant": "#c1c6d7",
+              "inverse-surface": "#303032",
+              "surface-container-highest": "#e4e2e4",
+              "on-primary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "primary-container": "#0070eb",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#c64f00",
+              "on-error-container": "#93000a",
+              "on-background": "#1b1b1d",
+              "on-secondary-container": "#626267",
+              "secondary-container": "#e0dfe4",
+              "secondary-fixed-dim": "#c6c6cb",
+              "tertiary-fixed-dim": "#ffb595",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "on-primary-fixed": "#001a41",
+              "surface-variant": "#e4e2e4",
+              "tertiary": "#9e3d00",
+              "secondary-fixed": "#e3e2e7",
+              "on-secondary-fixed-variant": "#46464b",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#005bc1",
+              "inverse-on-surface": "#f3f0f2",
+              "primary": "#0058bc",
+              "error": "#ba1a1a",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-low": "#f6f3f5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf8fb]/80 dark:bg-[#1b1b1d]/80 backdrop-blur-xl">
+<div class="flex flex-col px-6 pt-4 pb-2 w-full">
+<div class="flex items-center justify-between w-full mb-3">
+<h1 class="font-['Inter'] font-semibold text-lg tracking-tight text-[#1b1b1d]">Explorar</h1>
+<div class="text-[#0058bc] dark:text-[#0070eb] hover:opacity-80 transition-opacity active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</div>
+</div>
+<!-- iOS Style Search Bar Container -->
+<div class="w-full pb-2">
+<div class="flex items-center bg-surface-container-low rounded-xl px-3 py-2 space-x-2">
+<span class="material-symbols-outlined text-on-surface-variant text-xl" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder-on-surface-variant font-body text-md" readonly="" type="text" value="Vintage Watch"/>
+<span class="material-symbols-outlined text-on-surface-variant text-xl cursor-pointer" data-icon="cancel">cancel</span>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-b from-[#f6f3f5] to-transparent h-px"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="min-h-screen flex flex-col items-center justify-center px-8 pt-32 pb-20">
+<!-- Empty State Container -->
+<div class="flex flex-col items-center text-center max-w-xs">
+<!-- Large Magnifying Glass (SF Symbol Style) -->
+<div class="mb-6 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full scale-150 blur-xl"></div>
+<span class="material-symbols-outlined text-8xl text-outline-variant/60" data-icon="search" style="font-variation-settings: 'wght' 200;">search</span>
+</div>
+<!-- Empty State Text -->
+<h2 class="text-xl font-semibold text-on-surface mb-2">Sin resultados para "Vintage Watch"</h2>
+<p class="text-on-surface-variant text-md">Intenta con otros términos</p>
+<!-- Suggested Actions -->
+<div class="mt-12 w-full space-y-3">
+<button class="w-full bg-primary text-on-primary font-medium py-3 rounded-md hover:opacity-90 active:scale-[0.98] transition-all">
+                    Borrar búsqueda
+                </button>
+<button class="w-full bg-secondary-container text-on-secondary-container font-medium py-3 rounded-md hover:opacity-90 active:scale-[0.98] transition-all">
+                    Ver tendencias
+                </button>
+</div>
+</div>
+<!-- Subtle "Suggested for you" Section (Bento Lite) -->
+<div class="w-full max-w-md mt-16 px-4">
+<h3 class="text-sm font-label font-bold uppercase tracking-wider text-on-surface-variant mb-6">Quizás te interese</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Suggestion Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_20px_rgba(27,27,29,0.04)] active:scale-95 transition-transform cursor-pointer">
+<div class="aspect-square rounded-lg bg-surface-container overflow-hidden mb-3">
+<img alt="Product" class="w-full h-full object-cover" data-alt="Modern minimalist white digital watch on a clean studio background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Ls3TstWchjqzkDyLfcgoSco939hkOJz6kELudy6w44L4bCLBi-VyudYQSKK-G3CDg_SnRG4fFny1XoNT-EL5jqeFl_ETec6AO6tl03AX8PI41siAKm36ZizQp70g_jyv5BHkPgTXG8YG082Mk3KTluf2q95w5vhPvoGwyjP8YTWGLiSdGyDlIHH1HMM9Vau6v1ZeXf7tV8r1GLwZqLwcjGOlgl0Z3aIxLTWJvZ2eNZBhvZeyv6-2gL-6GyxyuhUPwqaFQXPH_T4"/>
+</div>
+<p class="text-sm font-semibold text-on-surface truncate">Relojes Digitales</p>
+<p class="text-xs text-primary font-medium">Explorar ahora</p>
+</div>
+<!-- Suggestion Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_20px_rgba(27,27,29,0.04)] active:scale-95 transition-transform cursor-pointer">
+<div class="aspect-square rounded-lg bg-surface-container overflow-hidden mb-3">
+<img alt="Product" class="w-full h-full object-cover" data-alt="Luxury mechanical watch movement close-up showing gears and intricate gold components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe8E5PW5UpHmBU9jyHvr4LgMRmCZbVNxNhs57kTcgAdT1r3Y-9gcLzThyWEpVSjeKwRgEuy9ZvVoLDpxRj_7Bj9BRn-thsQF3LMnHtoNjkeyBuwx1VKNKOTRBmoRF0Q0Q289vb9bYo1kGEQB5OZlf2bUishjHL4aIefzzD-hGzZeN83UoO1V9_tsyFXzaz3rpibJLY_HvsY1hpG0lwvQHIUFpWe8XBCwJVZDjLlEE6Qmkwfv1KWMdfDg_RYwQIdVfl3krpcACJvnU"/>
+</div>
+<p class="text-sm font-semibold text-on-surface truncate">Colección Premium</p>
+<p class="text-xs text-primary font-medium">Ver más</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-2 pb-8 px-4 bg-[#fcf8fb]/80 dark:bg-[#1b1b1d]/80 backdrop-blur-xl border-t border-[#f6f3f5] dark:border-[#414755]/15 shadow-[0_-4px_20px_rgba(27,27,29,0.04)] rounded-t-[1.5rem] z-50">
+<!-- Active Tab: Explorar -->
+<a class="flex flex-col items-center justify-center text-[#0058bc] dark:text-[#0070eb] font-semibold tap-highlight-none active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Explorar</span>
+</a>
+<!-- Tab: Guardados -->
+<a class="flex flex-col items-center justify-center text-[#414755] dark:text-[#f6f3f5]/60 hover:text-[#0058bc] transition-colors tap-highlight-none active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bookmark">bookmark</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Guardados</span>
+</a>
+<!-- Tab: Perfil -->
+</nav>
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1a1b1f",
+              "on-primary-fixed-variant": "#004493",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fcf8fb",
+              "outline": "#717786",
+              "primary-fixed-dim": "#adc6ff",
+              "on-surface-variant": "#414755",
+              "inverse-primary": "#adc6ff",
+              "error-container": "#ffdad6",
+              "background": "#fcf8fb",
+              "surface-dim": "#dcd9dc",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "surface-container": "#f0edef",
+              "secondary": "#5d5e63",
+              "surface": "#fcf8fb",
+              "surface-container-high": "#eae7ea",
+              "tertiary-fixed": "#ffdbcc",
+              "on-tertiary-fixed": "#351000",
+              "on-surface": "#1b1b1d",
+              "outline-variant": "#c1c6d7",
+              "inverse-surface": "#303032",
+              "surface-container-highest": "#e4e2e4",
+              "on-primary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "primary-container": "#0070eb",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#c64f00",
+              "on-error-container": "#93000a",
+              "on-background": "#1b1b1d",
+              "on-secondary-container": "#626267",
+              "secondary-container": "#e0dfe4",
+              "secondary-fixed-dim": "#c6c6cb",
+              "tertiary-fixed-dim": "#ffb595",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "on-primary-fixed": "#001a41",
+              "surface-variant": "#e4e2e4",
+              "tertiary": "#9e3d00",
+              "secondary-fixed": "#e3e2e7",
+              "on-secondary-fixed-variant": "#46464b",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#005bc1",
+              "inverse-on-surface": "#f3f0f2",
+              "primary": "#0058bc",
+              "error": "#ba1a1a",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-low": "#f6f3f5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .ios-blur { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .glass-morphism { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Top Navigation Bar (Fixed - iOS 26 style) -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<button class="flex items-center text-primary active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-[28px]">chevron_left</span>
+<span class="font-semibold tracking-tight text-lg -ml-1">Curated</span>
+</button>
+<div class="flex gap-5">
+<button class="text-on-surface active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="text-on-surface active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-[26px]">search</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="pb-40 pt-16">
+<!-- Product Image -->
+<section class="w-full aspect-square relative overflow-hidden bg-surface-container-low mb-8">
+<img alt="Premium Nike sneakers in vibrant red and white" class="w-full h-full object-cover" data-alt="close-up of a premium red and white leather sneaker on a minimalist neutral background with professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9poNKJDcz6OryKLS9yEcpXPlVbj-tzmtaQMwMlbg1vQ3TvBHSaFLXF-cX0xCGI9stDCp4h0NacZ-nxfODOkxOUreQD4QJs0wo1l45qCtzk0m3Lur-q4JYuqvQ_sp6PnG-Oy_yiemSyOjEjcPFhdX2hNNsVXbjvMEe-KHLoBLHbzx6b_5RrTUcBM226e82Dqs8TwXWxnH-w5mnSv_4XyVTE8wePo9trWYY1FsDRvYMqyWl_tPVydm8d_2QduiuYVj8FXXOG8iRbnQ"/>
+<div class="absolute bottom-6 right-6 bg-on-surface/10 backdrop-blur-xl px-4 py-1.5 rounded-full border border-white/20">
+<p class="text-[11px] font-bold text-on-surface/80 uppercase tracking-widest">1 / 5</p>
+</div>
+</section>
+<!-- Product Details Container -->
+<div class="px-8 space-y-10">
+<!-- Header Info -->
+<div class="space-y-4">
+<div class="flex flex-wrap items-center gap-3">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-primary/20">Top Rated</span>
+<span class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Calzado • Nike Official</span>
+</div>
+<h1 class="text-3xl font-extrabold tracking-tight leading-[1.15]">Nike Air Max 270 React Premium Edition</h1>
+<div class="flex items-end gap-3 pt-2">
+<p class="text-4xl font-black text-on-surface">$12.499</p>
+<p class="text-primary font-bold text-sm mb-1.5 px-2 py-0.5 bg-primary/10 rounded-lg">15% OFF</p>
+</div>
+<!-- Rating & Social Proof -->
+<div class="flex items-center gap-4 py-2">
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+<span class="ml-2 font-bold text-on-surface text-lg">4.8</span>
+</div>
+<span class="h-4 w-px bg-outline-variant/30"></span>
+<p class="text-on-surface-variant text-sm font-medium">2.4k opiniones</p>
+</div>
+</div>
+<!-- Bento Info Cards -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-6 rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-3 text-2xl">inventory_2</span>
+<p class="text-xs text-on-surface-variant font-medium">Disponibilidad</p>
+<p class="text-sm font-bold text-on-surface mt-1">Stock Disponible</p>
+<p class="text-[10px] text-tertiary font-bold mt-1 uppercase tracking-tighter">(24 unidades)</p>
+</div>
+<div class="bg-white p-6 rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-3 text-2xl">local_shipping</span>
+<p class="text-xs text-on-surface-variant font-medium">Envío</p>
+<p class="text-sm font-bold text-on-surface mt-1">Llega mañana</p>
+<p class="text-[10px] text-primary font-bold mt-1 uppercase tracking-tighter">Envío Gratis</p>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-4">
+<h3 class="text-xl font-bold tracking-tight">Descripción</h3>
+<div class="prose prose-sm text-on-surface-variant leading-relaxed font-medium">
+<p class="text-base">Las Nike Air Max 270 React utilizan tecnología ligera y por capas para crear una estética moderna que se ve tan bien como se siente. La tecnología Nike React es una espuma ligera y duradera que ofrece una pisada suave y elástica.</p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 active:opacity-60 transition-opacity">
+                    Leer más especificaciones <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Seller Info -->
+<div class="bg-surface-container-low/50 backdrop-blur-sm p-7 rounded-[2.5rem] space-y-6 border border-white/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10">
+<img alt="Nike Brand Logo" class="w-full h-full object-contain p-2" data-alt="minimalist professional logo of a famous sports brand on a clean white circular background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzk9F8wNnbDAfp3rgcKd6jgphf4ewgYnX1wgHVSU78pCLPstI6aZEtyI9vERxOsriFTvCbAHlthb-DdWeRmwJirfDqv_a2zeNgM7ITdepifILMxHzpBhM4lQuQe7v8Hj3ks1gYzuoUA0OBUGpQB8Joj_l3QmmCa8AevcyBHDtcrcRqG4_ISr_FIB4vomliRkCM2INm2LeBq5ZU-ZfP0naGHo4rmemil0irjBGiPU4kn_52Zf1ULXtruVf1LAg7OIyXwOf9xBaoJQM"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-lg">Nike Official Store</p>
+<p class="text-xs text-on-surface-variant font-medium">MercadoLíder Platinum</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl">verified</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="text-center">
+<p class="text-sm font-black text-on-surface">50k+</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Ventas</p>
+</div>
+<div class="text-center border-x border-outline-variant/30">
+<p class="text-sm font-black text-on-surface">4.9</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Atención</p>
+</div>
+<div class="text-center">
+<p class="text-sm font-black text-on-surface">100%</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Entrega</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Glassmorphism Dock (iOS 26 Style) -->
+<footer class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-2 p-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl rounded-[2.5rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] min-w-[280px]">
+<!-- Explorar (Active) -->
+<button class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/30 rounded-full px-8 py-2.5 active:scale-90 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-[0.05em] uppercase mt-0.5">Explorar</span>
+</button>
+<!-- Guardados -->
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-8 py-2.5 hover:bg-white/40 dark:hover:bg-slate-800/40 rounded-full active:scale-90 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined text-[24px]">bookmark</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-[0.05em] uppercase mt-0.5">Guardados</span>
+</button>
+</footer>
+</body></html>
